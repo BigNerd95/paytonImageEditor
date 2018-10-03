@@ -7,10 +7,19 @@ Cisco SPA232D firmware editor
 ## Build custom firmware
 ```bash
 $ cd CustomFW
-$ tar xf squashfs-root.tar.xz
+$ sudo tar xf squashfs-root.tar.xz
 $ ./build.sh
 ``` 
+You can find a pre-built custom firmware with only telnet enabled [here](https://github.com/BigNerd95/paytonImageEditor/blob/master/CustomFW/CustomFW.bin?raw=true)
 
-You can edit `CustomFW/squash-root/etc/my.sh` to run commands at boot.  
-You can get info loading `http://192.168.15.1/my.asp`  
-(I was not able to connect to telnet server)
+## Flash CustomFW
+Flash the custom firmware like an official update through the web interface
+
+## Telnet
+You can now connect to telnet:
+```bash
+$ telnet 192.168.15.1 23000
+```
+(No login)
+
+You must connect via LAN port.
